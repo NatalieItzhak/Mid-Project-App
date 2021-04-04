@@ -26,7 +26,14 @@ h1 {
   text-transform: uppercase;
   margin: 4rem 0;
 }
-
+.Navbar{
+  font-size: 3rem;
+  text-align: center;
+}
+.back{
+  font-size: 3rem;
+  text-align: left;
+}
 .search-form {
   width: 60rem;
   height: 10rem;
@@ -61,6 +68,19 @@ h1 {
   background-color:  #288ca5;
   color: #fff;
 }
+.err {
+  position: absolute;
+  top: -3;
+  left: -12;
+  padding: 0.4rem;
+}
+
+.err h3 {
+  font-size: 1.8rem;
+  color:black;
+  text-transform: uppercase;
+  text-align: center;
+}
 
 .recipes {
   width: 90%;
@@ -72,20 +92,20 @@ h1 {
 }
 
 .recipe {
-  width: 20rem;
-  margin: 2rem;
+  width: 30rem;
+  margin: 3rem;
   display: flex;
   flex-direction: column;
   background-color: #d3d3d3;
   padding: 2rem;
   position: relative;
-  border-radius: 1rem;
-
+  border-radius: 0.5rem;
+  box-shadow: 2rem 3rem 5rem #aaa;
 }
 
 .recipe h2 {
   background-color: rgba(161, 161, 161, 0.7);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 0.3rem 0.5rem;
   position: absolute;
   top: 2.5rem;
@@ -93,15 +113,15 @@ h1 {
   right: 2.5rem;
   font-size: 2.5rem;
   font-weight: 400;
-  text-shadow: 0 0.5rem 0.5rem rgb(63, 59, 59);
+  text-shadow: 0 0.5rem 0.5rem #555;
   color: #fff;
 }
 
 .recipe img {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   object-fit: cover;
-
 }
+
 
 .recipe a {
   font-size: 1.9rem;
