@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import axios from 'axios';
 import { v4 as uuid4 } from 'uuid';
 import Recipe from './Recipe';
@@ -24,7 +24,7 @@ function HomePage() {
             setMsg('')
             setData('')
         } else{
-            setMsg('No Text => No Search')
+            setMsg('Please fill the field')
         }
         // console.log(res.data.hits);
     }
@@ -47,7 +47,7 @@ function HomePage() {
             <form className='search-form'
                 onSubmit={onSubmit}>
                {msg !== '' && <HandleErr msg={msg} />}
-                <input type='text' placeholder='Search Food' value={data} onChange={onChange}></input>
+                <input type='text' placeholder='Search Food'  value={data} onChange={onChange}></input> 
                 <button type='submit' value='search' >Search</button>
             </form>
             <div className='recipes'>
