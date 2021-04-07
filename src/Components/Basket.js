@@ -8,8 +8,8 @@ function Basket(props) {
   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
   return (
-    <aside className="block col1">
-      <h2>Cart Items</h2>
+    <aside className="block col1 cart">
+      <h2 className='cartTitle'>Cart Items</h2>
       <div>
         {cartItems.length === 0 && <div>Cart is empty</div>}
         {cartItems.map((item) => (
@@ -55,8 +55,8 @@ function Basket(props) {
             </div>
             <hr />
             <div className="row">
-              <button onClick={() => alert(' Checkout!')}>
-                Checkout
+              <button onClick={() => alert('We Got Your Order, Your Delivery Is On The Way')}>
+                Order
               </button>
             </div>
           </>
