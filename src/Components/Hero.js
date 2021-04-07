@@ -10,10 +10,10 @@ const Hero = ({ handleLogout }) => {
                 <span className='logo'></span>
                 <div><h2>Welcome Foddie!</h2>
                     <div className='topMsg'>Check Our New Recipes</div></div>
-
-
-                <Link className='link' to='/Components/HomePage'> Recipes</Link>
-                <Link className='link' to='/Components/Grocery'> Grocery</Link>
+                <div className='linksNav'>
+                    <Link className='link' to='/Components/HomePage'> Recipes</Link>
+                    <Link className='link' to='/Components/Grocery'> Grocery</Link>
+                </div>
 
                 <button onClick={handleLogout}>Logout</button>
             </nav>
