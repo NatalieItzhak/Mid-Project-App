@@ -1,97 +1,96 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Original Surfer', cursive;
-  }
-  
-  .login {
-position: relative;
-  }
-  
-  .login .loginContainer {
-    padding: 40px;
-    margin: auto;
-    width: 100%;
-    max-width: 520px;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    justify-content: right;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Original Surfer', cursive;
+}
 
-  }
-  
-  .login .loginContainer label {
-    color: white;
-    margin: 14px 0;
-    display: block;
-    font-size: 22px;
-    line-height: 1;
-  }
-  
-  .login .loginContainer input {
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 19px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    letter-spacing: 1px;
-  }
-  
-  .login .loginContainer .btnContainer {
-    width: 100%;
-    padding: 24px 0;
-  }
-  
-  .login .loginContainer .btnContainer p {
-    margin: 14px 0 0 0;
-    text-align: right;
-    color: #fff;
-  }
-  
-  .login .loginContainer .btnContainer p span {
-    color: yellow;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    margin-left: 5px;
-    cursor: pointer;
-    transition: all 400ms ease-in-out;
-  }
-  
-  .login .loginContainer .btnContainer p span:hover {
-    color: red;
-  }
-  
-  .login .loginContainer .errorMsg {
-    color: red;
-    background-color: #fff;
-    border: 1px solid black;
-    font-size: 16px;
-  }
-  
-  .hero {
-    width: 100%;
-  }
-  
-  .hero nav {
-    background: #a1769a;
-    width: 100%;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .hero nav h2 {
-    color: #fff;
-  }
-  
-  .hero nav button {
-    width: 100px;
-    padding: 8px 0;
-    background:  #a1769a;
-  }
-  
+.login {
+  position: relative;
+}
+
+.login .loginContainer {
+  padding: 40px;
+  margin: auto;
+  width: 100%;
+  max-width: 520px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: right;
+}
+
+.login .loginContainer label {
+  color: white;
+  margin: 14px 0;
+  display: block;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.login .loginContainer input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 19px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.login .loginContainer .btnContainer {
+  width: 100%;
+  padding: 24px 0;
+}
+
+.login .loginContainer .btnContainer p {
+  margin: 14px 0 0 0;
+  text-align: right;
+  color: #fff;
+}
+
+.login .loginContainer .btnContainer p span {
+  color: yellow;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+
+.login .loginContainer .btnContainer p span:hover {
+  color: red;
+}
+
+.login .loginContainer .errorMsg {
+  color: red;
+  background-color: #fff;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+.hero {
+  width: 100%;
+}
+
+.hero nav {
+  background: #a1769a;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero nav h2 {
+  color: #fff;
+}
+
+.hero nav button {
+  width: 10rem;
+  height: 8rem;
+  padding: 8px 0;
+  background: #a1769a;
+}

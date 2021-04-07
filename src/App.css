@@ -21,6 +21,29 @@ font-family: 'Zhi Mang Xing', cursive;
   
   /* align-items: center; */
 }
+.about{
+  padding: 4rem;
+  font-size: 25px;
+  font-weight: 700;
+  color:#fff;
+  text-align: center;
+  width: 60%;
+}
+.bold{
+font-size: 40px;
+color: #973953;
+}
+.logo{
+  background-image: url(./735ebcedd5fb45d0bce5d6ab4197dd9e.png);
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  
+}
+.topMsg{
+  font-size: 20px;
+}
+
 .homePage{
   display:flex;
   flex-direction: column;
@@ -213,12 +236,12 @@ button{
 }
 .back{
   color: #080808;
-  font-size: 5rem;
-  margin-top: 2rem;
+  font-size: 3rem;
   font-weight: 600;
 	min-width: 90px;
 	position: absolute;
 	left: 60px;
+  border: 3px solid burlywood;
 }
 input{
   font-weight: 700;

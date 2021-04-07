@@ -103,6 +103,7 @@ function App() {
                 setHasAccount={setHasAccount}
                 emailerr={emailerr}
                 passworderr={passworderr}
+                handleLogout={handleLogout}
               />
             )}
   

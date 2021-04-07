@@ -47,6 +47,12 @@ const data={
           price:55,
           image:'https://picsum.photos/id/766/367/267'
       },
+      {
+          id:'8',
+          name:'Cookies',
+          price:25,
+          image:'https://picsum.photos/id/835/367/267'
+      },
   ],
 } ;                                                    
 export default data;

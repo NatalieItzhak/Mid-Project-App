@@ -38,8 +38,7 @@ function Grocery() {
     };
     return (
         <div>
-            <Link className='back' to='/'>Back</Link>
-            <h1></h1>
+            {/* <Link className='back' to='/'>Back</Link> */}
             <Top countCartItems={cartItems.length} />
             <div className='row'>
                 <Main products={Products} onAdd={onAdd} />
