@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import {  Link } from 'react-router-dom';
 import axios from 'axios';
 import { v4 as uuid4 } from 'uuid';
@@ -13,6 +13,11 @@ function HomePage() {
     const APP_ID = "2a245b8d";
     const APP_KEY = "1b5d7651d5126b0169a372c4c7c7da36";
     const Url = `https://api.edamam.com/search?q=${data}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+
+    // useEffect(()=>{
+    //     getData();  
+    // }, []);
+
     const getData = async () => {
         if (data !== '') {
             const res = await axios.get(Url);
@@ -24,7 +29,7 @@ function HomePage() {
             setMsg('')
             setData('')
         } else{
-            setMsg('Please fill the field')
+            setMsg('Please fill the form')
         }
         // console.log(res.data.hits);
     }
@@ -32,8 +37,8 @@ function HomePage() {
     const onSubmit = (e) => {
         e.preventDefault();
         getData();
-
     }
+
     const onChange = (e) => {
         setData(e.target.value)
     };
@@ -41,7 +46,7 @@ function HomePage() {
 
     return (
 
-        <div className="App">
+        <div className="homePage">
             <Link className='back' to='/'>Back</Link>
             <h1 >Food Recipes</h1>
             <form className='search-form'

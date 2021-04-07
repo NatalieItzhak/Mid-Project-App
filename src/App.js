@@ -1,27 +1,120 @@
 import './App.css';
-import React from 'react';
 import HomePage from './Components/HomePage';
-import Tacos from './Components/Tacos';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
+import Grocery from './Components/Grocery';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import fire from './Components/fire';
+import Login from './Components/Login';
+import Hero from './Components/Hero';
+
+
 
 
 
 function App() {
+  const [user, setUser] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassord] = useState('');
+  const [emailerr, setEmailErr] = useState('');
+  const [passworderr, setPasswordErr] = useState('');
+  const [hasAccount, setHasAccount] = useState(false);
+
+  const login = () => {
+    clearErr();
+    fire
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch(err => {
+        switch (err.code) {
+          case "auth/invalid-email":
+          case "auth/user-disabled":
+            setEmailErr(err.message);
+            break;
+          case "auth/wrong.password":
+            setPasswordErr(err.message)
+            break;
+
+        }
+      });
+  };
+
+  const handleSignup = () => {
+    clearErr();
+    fire
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .catch(err => {
+        switch (err.code) {
+          case "auth/email-already-in-use":
+          case "auth/invalid-email":
+            setEmailErr(err.message);
+            break;
+          case "auth/weak-password":
+            setPasswordErr(err.message)
+            break;
+
+        }
+      });
+  }
+  const clearInputs = () => {
+    setEmail('');
+    setPassord('');
+  }
+
+  const clearErr = () => {
+    setEmailErr('');
+    setPasswordErr('');
+  }
+
+  const handleLogout = () => {
+    fire.auth().signOut();
+  }
+
+  const authListener = () => {
+    fire.auth().onAuthStateChanged(user => {
+      if (user) {
+        clearInputs();
+        setUser(user);
+      } else {
+        setUser('');
+      }
+    });
+  }
+  useEffect(() => {
+    authListener();
+  }, []);
+
 
   return (
     <div className="App">
-<BrowserRouter>
-<div>
-<Route path='/' exact><h1>Welcome to Foddies </h1> 
-<div className='Navbar'>
-  <Link className='link' to='/Components/HomePage'> Main Recipes</Link>
-  <br></br>
-  <Link className='link' to='/Components/Tacos'> Mexican Tacos</Link>
-  </div></Route>
-<Route path='/Components/HomePage' component={HomePage}/>
-<Route path='/Components/Tacos' component={Tacos}/>
-</div>
-</BrowserRouter>
+      <BrowserRouter>
+        <div>
+          {user ? (
+              <Hero handleLogout={handleLogout} />
+            ) : (
+              <Login
+                email={email}
+                setEmail={setEmail}
+                password={password}
+                setPassord={setPassord}
+                login={login}
+                handleSignup={handleSignup}
+                hasAccount={hasAccount}
+                setHasAccount={setHasAccount}
+                emailerr={emailerr}
+                passworderr={passworderr}
+              />
+            )}
+  
+            <Route path='/' exact><h1></h1>
+         
+           
+            {/* <br></br> */}
+          </Route>
+          <Route path='/Components/HomePage' component={HomePage} />
+          <Route path='/Components/Grocery' component={Grocery} />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
