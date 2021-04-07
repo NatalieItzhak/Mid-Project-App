@@ -11,7 +11,7 @@ function Basket(props) {
     <aside className="block col1 cart">
       <h2 className='cartTitle'>Cart Items</h2>
       <div>
-        {cartItems.length === 0 && <div>Cart is empty</div>}
+        {cartItems.length === 0 && <div className='emptyCart'>Cart is empty</div>}
         {cartItems.map((item) => (
           <div key={item.id} className="row">
             <div className="col2">{item.name}</div>

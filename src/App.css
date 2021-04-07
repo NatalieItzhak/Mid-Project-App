@@ -41,9 +41,15 @@ color: #973953;
   
 }
 .topMsg{
-  font-size: 20px;
+  font-size: 25px;
+  position: relative;
+  animation: moving 3s infinite;
+  color: #5f3541;
 }
-
+@keyframes moving {
+  from {transform: translate(0px);}
+  to {transform: translate(100px);}
+}
 .homePage{
   display:flex;
   flex-direction: column;

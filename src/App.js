@@ -8,9 +8,6 @@ import Login from './Components/Login';
 import Hero from './Components/Hero';
 
 
-
-
-
 function App() {
   const [user, setUser] = useState('');
   const [email, setEmail] = useState('');
