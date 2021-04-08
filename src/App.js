@@ -1,6 +1,7 @@
 import './App.css';
 import HomePage from './Components/HomePage';
 import Grocery from './Components/Grocery';
+import Contact from './Components/Contact';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import fire from './Components/fire';
@@ -111,6 +112,7 @@ function App() {
           </Route>
           <Route path='/Components/HomePage' component={HomePage} />
           <Route path='/Components/Grocery' component={Grocery} />
+          <Route path='/Components/Contact' component={Contact} />
         </div>
       </BrowserRouter>
     </div>

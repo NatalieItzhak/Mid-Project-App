@@ -90,7 +90,6 @@ h1 {
 
 }
 
-
 .search-form input {
   font-size: 1.6rem;
   border: none;
@@ -165,6 +164,7 @@ h1 {
 .recipe img {
   border-radius: 0.5rem;
   object-fit: cover;
+
 }
 
 
@@ -192,13 +192,15 @@ h1 {
   display: flex;
   flex-direction: column;
   border: 3px solid burlywood;
+  border-radius: 5rem;
   padding: 10px 10px;
   margin-bottom: 10px;
   width: fit-content;
+  transition: all 400ms ease-in-out;
 }
 .link:hover{
-  background-color: plum;
-  color: #fff;
+  background-color: #fff;
+  color: rgb(90, 78, 78);
 }
 
 
@@ -242,6 +244,7 @@ button{
   margin-top: 2rem;
   border-radius: 1rem;
   font-weight: 600;
+ 
 
 }
 .back{

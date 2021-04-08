@@ -66,15 +66,16 @@
 }
 
 .login .loginContainer .errorMsg {
-  color: #fff;
+  color: rgb(48, 39, 39);
   border: 1px solid black;
-  font-size: 3rem;
+  font-size: 2.5rem;
 
 }
 
 button{
   width:10rem;
   height: max-content;
+ 
 }
 
 span{
