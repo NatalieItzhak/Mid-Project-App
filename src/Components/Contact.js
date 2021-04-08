@@ -1,9 +1,11 @@
 import React from 'react';
 import '../Contact.css';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 
 const Contact = (props) => {
     return (
+        <div> <Link className='back' to='/'>Back</Link>
         <div className='formCont'>
             <form>
                 <h2>Contact Us</h2>
@@ -17,6 +19,7 @@ const Contact = (props) => {
                 <textarea required placeholder="Write Yout Message"></textarea>
                 <button type='submit'>Submit</button>
             </form>
+        </div>
         </div>
     )
 }

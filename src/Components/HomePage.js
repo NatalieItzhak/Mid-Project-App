@@ -52,7 +52,7 @@ function HomePage() {
             <form className='search-form'
                 onSubmit={onSubmit}>
                {msg !== '' && <HandleErr msg={msg} />}
-                <input type='text' placeholder='Search Food'  value={data} onChange={onChange}></input> 
+                <input type='text' placeholder='What do you want to eat?'  value={data} onChange={onChange}></input> 
                 <button type='submit' value='search' >Search</button>
             </form>
             <div className='recipes'>

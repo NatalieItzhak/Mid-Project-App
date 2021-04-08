@@ -15,7 +15,7 @@ const Hero = ({ handleLogout }) => {
                     <Link className='link' to='/Components/Grocery'> Grocery</Link>
                     <Link className='link' to='/Components/Contact'> Contact Us</Link>
                 </div>
-
+           
                 <button onClick={handleLogout}>Logout</button>
             </nav>
             <p className='about'>

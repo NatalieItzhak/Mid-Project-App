@@ -8,6 +8,7 @@ const Login = (props) => {
         <section className='login'>
              <div className='logo'></div>
             <div className='loginContainer'>
+                
                 <label>Email:</label>
                 <input type='text' outFocus required value={email}
                     onChange={(e) => setEmail(e.target.value)}></input>
@@ -27,12 +28,12 @@ const Login = (props) => {
                         <>
                             <button onClick={handleSignup}>Sign up</button>
                             <p>Have an account? <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span></p>
+                         
                         </>
                     )}
 
                 </div>
             </div>
-
         </section >
     )
 }
